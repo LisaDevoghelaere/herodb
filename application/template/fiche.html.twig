@@ -1,0 +1,17 @@
+{% block header %}
+<div class="row">
+<h1>{{ hero-name }}</h1>
+</div>
+{% endblock header %}
+{% block content %}
+<div class="part-left">
+    <div class="div-img-hero">
+    <img src="{{ img-hero }}" alt=""></div>
+    <div class="what-side"><h2 class="{{ side }}"></h2></div>
+</div>
+<div class="part-right">
+<div class="hero-stat"></div>
+<div class="hero-identity"></div>
+<div class="hero-biography"></div>
+</div>
+{% endblock content %}
