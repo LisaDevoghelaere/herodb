@@ -4,3 +4,42 @@ font-family: 'EB Garamond', serif;
 titre
 font-family: 'Federo', sans-serif;
 */
+body {
+  background: #0000f9;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #0000f9), color-stop(95%, #f70116));
+  background: linear-gradient(90deg, #0000f9 5%, #f70116 95%);
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.black-block {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  padding: 0.8rem;
+}
+
+.black-block h1 {
+  font-family: 'Federo', sans-serif;
+  font-size: 2rem;
+}
+
+.black-block p {
+  font-family: 'Federo', sans-serif;
+  font-size: 1.3rem;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 0, 255, 0.431);
+          box-shadow: 0 0 0 0.2rem rgba(247, 0, 255, 0.431);
+}
+/*# sourceMappingURL=style.css.map */

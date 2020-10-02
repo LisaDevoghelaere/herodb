@@ -1,17 +1,31 @@
+{% extends "base.html.twig" %}
 {% block header %}
-<div class="row">
-<img src="../../public/media/superheros-ban.png" alt="ban">
+<div class="row  center">
+  <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+    <img src="media/big-logo.png" alt="ban" class="col-12">
+  </div>
 </div>
 {% endblock header %}
 {% block content %}
-<h1>HERO DB</h1>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Enter a super hero name" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+<div class="row">
+  <div class="col-lg-4 col-md-3 col-sm-3 col-12">
+    <img src="media/big-f.png" alt="super-woman" class="col-12">
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+    <div class="black-block">
+      <h1>OFFICIAL HERO DB</h1>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Batman" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-light btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+      </div>
+      <p>Enter an hero's name or ID to consult his/her profil</p>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-3 col-sm-3 col-12">
+    <img src="media/big-m.png" alt="super-man" class="col-12">
   </div>
 </div>
-<p>Enter an hero name or ID to consult his/her profil</p>
-<div class="girl-power"></div>
-<div class="popular-hero"></div>
 {% endblock content %}

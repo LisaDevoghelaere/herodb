@@ -17,6 +17,8 @@ class Home{
         // render template
         $template = $twig->load('home.html.twig');
         echo $template->render();
+        // dump($_SERVER);
+        // echo getcwd();
     
     }
 
