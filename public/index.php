@@ -19,29 +19,20 @@ $router = new AltoRouter();
     $router->map('GET', '/', function () {
         \App\Home::homePage();
     });
-    // Page Fiche
-    $router->map('GET', '/', function () {
-        \App\Fiche::homePage();
-    });
-
-    // Page fiche
-    // $router->map('GET', '/fiche[:ann_unique_id]', function ($ann_unique_id){
-    //         //test if unique_id exists
-    //     if((!\App\Annonce::Exists($ann_unique_id))||(\App\Annonce::IsValidated($ann_unique_id))){
-    //         header('Location: /');
-    //     }
-    
+    //page batman
+    $value= new \App\Batman();
+    $values = $value -> callBatman();
 
 
-//         //render template
-//         $twig = new Twig('annonce.html.twig');
-//         $twig->render([
-//                 'variable' => $variable->data[0],
-//                 'id' => $id,
-//                 // 'serveur_uri' => SERVER_URI  
-//         ]);
+        //render template
+        $twig = new Twig('home.html.twig');
+        $twig->render([
+                'values' => $values
+                
+                // 'serveur_uri' => SERVER_URI  
+        ]);
         
-//     // });
+    // });
     
    
 // Lancer les map du routeur

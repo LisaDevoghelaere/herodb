@@ -17,9 +17,22 @@ class Home{
         // render template
         $template = $twig->load('home.html.twig');
         echo $template->render();
-        // dump($_SERVER);
-        // echo getcwd();
+
     
     }
 
 }
+
+
+
+// class Batman
+// {
+//     public $data=[];
+
+//     function __construct() {
+//         $base = new \App\Db();
+
+//         $req = $base->q("https://superheroapi.com/api/10223722812199901/search/batman");
+//         $this->data = $req;
+//     }
+// }
