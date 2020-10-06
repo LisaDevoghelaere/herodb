@@ -16,7 +16,9 @@ class Home{
         
         // render template
         $template = $twig->load('home.html.twig');
-        echo $template->render();
+        echo $template->render([
+            
+        ]);
 
     
     }

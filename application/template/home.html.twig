@@ -8,33 +8,23 @@
 {% endblock header %}
 {% block content %}
 <section class="row">
-  <div class="col-lg-4 col-md-3 col-sm-3 col-12">
-    <img src="media/big-f.png" alt="super-woman" class="col-12">
+  <div class="">
+    <img src="media/mobile/sh-f-mobile.png" alt="super-woman" class="">
   </div>
   <div class="col-lg-4 col-md-6 col-sm-6 col-12">
     <div class="black-block">
-      <h1>OFFICIAL HERO DB</h1>
       <div class="input-group mb-3">
         <input type="text" id="heroinput" class="form-control" placeholder="Batman" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-light btn-outline-secondary" type="button" id="herobtn">Search</button>
-        </div>
       </div>
-      <p>Enter an hero's name or ID to consult his/her profil</p>
+     <!--<p>Enter an hero's name or ID</p>-->
     </div>
   </div>
-  <div class="col-lg-4 col-md-3 col-sm-3 col-12">
-    <img src="media/big-m.png" alt="super-man" class="col-12">
+  <div class="">
+    <img src="media/mobile/sh-m-mobile.png" alt="super-man" class="">
   </div>
 </section>
 
-<div id="identity-card">
-  {% for value in values %}
-  <ul>
-    <li>{{ value.name}}</li>
-  </ul>
-    
-  {% endfor %}
- {{ dump(values) }}
+<div id="identity-cards">
+
 </div>
 {% endblock content %}

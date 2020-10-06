@@ -19,18 +19,21 @@ $router = new AltoRouter();
     $router->map('GET', '/', function () {
         \App\Home::homePage();
     });
-    //page batman
-    $value= new \App\Batman();
-    $values = $value -> callBatman();
+    //Route pour l'API
+    $router->map('POST', '/search', function () {
+        \App\Batman::callBatman();
+    });
+    // $value= new \App\Batman();
+    // $values = $value -> callBatman();
 
 
-        //render template
-        $twig = new Twig('home.html.twig');
-        $twig->render([
-                'values' => $values
+    //     //render template
+    //     $twig = new Twig('home.html.twig');
+    //     $twig->render([
+    //             'values' => $values
                 
-                // 'serveur_uri' => SERVER_URI  
-        ]);
+    //             // 'serveur_uri' => SERVER_URI  
+    //     ]);
         
     // });
     

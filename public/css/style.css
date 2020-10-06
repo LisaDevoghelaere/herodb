@@ -21,21 +21,9 @@ body {
           justify-content: center;
 }
 
-.black-block {
-  background-color: black;
-  color: white;
-  border-radius: 15px;
-  padding: 0.8rem;
-}
-
-.black-block h1 {
-  font-family: 'Federo', sans-serif;
-  font-size: 2rem;
-}
-
-.black-block p {
-  font-family: 'Federo', sans-serif;
-  font-size: 1.3rem;
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .form-control:focus {
