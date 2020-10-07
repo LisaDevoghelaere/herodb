@@ -26,6 +26,18 @@ img {
      object-fit: contain;
 }
 
+.id-card {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  padding: 0.8rem;
+}
+
+.id-card h2 {
+  font-family: 'Federo', sans-serif;
+  font-size: 1.8rem;
+}
+
 .form-control:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 0, 255, 0.431);
           box-shadow: 0 0 0 0.2rem rgba(247, 0, 255, 0.431);

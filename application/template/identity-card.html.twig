@@ -1,11 +1,63 @@
-<ul>
+<div>
+<!-- Boucle qui limite les résultats à 10-->
     {% for i in 0..values.results|length %}
       {% if i < 10 %}
-        <li>{{values.results[i].name}}</li>
-        <li><img src="{{ values.results[i].image.url}}"></li>
-      {% endif %}
-        
+      <div class="row id-card">
+    <h2 class="col-12">{{values.results[i].name}}</h2>
+  </div>
+  <div class="row">
+    <div class="part-left col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="div-img-hero col-12">
+        <img src="{{ values.results[i].image.url}}" alt="{{values.results[i].name}} photography" class="img-hero col-12">
+      </div>
+      <div class="alignment">
+        <h3 class="">{{ values.results[i].biography.alignment }}</h3>
+      </div>
+    </div>
+    <div class="part-right  col-lg-8 col-md-8 col-sm-12 col-12">
+      <div class="powerstats">
+      <h3>Powerstats :</h3>
+      <ul>
+        <li>intelligence : {{ values.results[i].powerstats.intelligence}}</li>
+        <li>strength : {{ values.results[i].powerstats.strength}}</li>
+        <li>speed : {{ values.results[i].powerstats.speed}}</li>
+        <li>durability : {{ values.results[i].powerstats.durability}}</li>
+        <li>power : {{ values.results[i].powerstats.power}}</li>
+        <li>combat : {{ values.results[i].powerstats.combat}}</li>
+      </ul>
+
+      </div>
+      <div class="hero-identity"> 
+        <p>{{ values.results[i].biography.full-name[0] }}</p>
+        <p>{{ values.results[i].biography.aliases[0]}}</p>
+        <p>{{ values.results[i].connections.group-affiliation }}</p>
+        <p>{{ values.results[i].connections.relatives }}</p>
+ </div>
+      <div class="hero-appearance"> 
+        <p>{{ values.results[i].appearance.gender }}</p>
+        <p>{{ values.results[i].appearance.race }}</p>
+        <p>{{ values.results[i].appearance.height[1] }}</p>
+
+
+
+        <!--"gender": "Male",
+        "race": "Mutant",
+        "height": [
+          "5'3",
+          "160 cm"
+        ],
+        "weight": [
+          "300 lb",
+          "135 kg"
+        ],
+        "eye-color": "Blue",
+        "hair-color": "Black"-->
+      </div>
+    </div>
+  </div>
+<!--Création de la crta d'identité-->
+      {% endif %}   
     {% endfor %}
 
-  </ul>
+  </div>
     

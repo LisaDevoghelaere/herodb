@@ -17,21 +17,16 @@ body{
 img{
     object-fit: contain;
 }
-// .black-block{
-//     background-color: rgba(0, 0, 0, 0);
-//     color: white;
-//     border-radius: 15px;
-//     padding : 0.8rem;
-//     h1{
-//         font-family: 'Federo', sans-serif;
-//         font-size : 1.8rem;
-//     }
-//     p{
-//         font-family: 'Federo', sans-serif;
-//         font-size : 1rem;
-
-//     }
-// }
+.id-card{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 15px;
+    padding : 0.8rem;
+    h2{
+        font-family: 'Federo', sans-serif;
+        font-size : 1.8rem;
+    }
+}
 .form-control:focus{
     box-shadow: 0 0 0 .2rem rgba(247, 0, 255, 0.431);
 }

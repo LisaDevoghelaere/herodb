@@ -5,15 +5,10 @@ require '../vendor/autoload.php';
 use App\Twig;
 use App\Home;
 
-// // Le routeur
-// $uri = $_SERVER['REQUEST_URI'];
+// Le routeur
 // créer une instance
 $router = new AltoRouter();
-// // projet dans sous dossier
-//chemin du projet
-// $router->setBasePath('');
 
-// echo 'coucou';
 
     // Page home
     $router->map('GET', '/', function () {
@@ -23,20 +18,7 @@ $router = new AltoRouter();
     $router->map('POST', '/search', function () {
         \App\Batman::callBatman();
     });
-    // $value= new \App\Batman();
-    // $values = $value -> callBatman();
 
-
-    //     //render template
-    //     $twig = new Twig('home.html.twig');
-    //     $twig->render([
-    //             'values' => $values
-                
-    //             // 'serveur_uri' => SERVER_URI  
-    //     ]);
-        
-    // });
-    
    
 // Lancer les map du routeur
 $match = $router->match();
