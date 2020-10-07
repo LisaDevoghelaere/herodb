@@ -27,35 +27,19 @@
       </ul>
 
       </div>
-      <div class="hero-identity"> 
-        <p>{{ values.results[i].biography.full-name[0] }}</p>
-        <p>{{ values.results[i].biography.aliases[0]}}</p>
-        <p>{{ values.results[i].connections.group-affiliation }}</p>
-        <p>{{ values.results[i].connections.relatives }}</p>
- </div>
-      <div class="hero-appearance"> 
+      <div class="hero-id-appearance"> 
+        <p>alias : {{ values.results[i].biography.aliases[0]}} • {{ values.results[i].biography.aliases[1]}}</p>
         <p>{{ values.results[i].appearance.gender }}</p>
         <p>{{ values.results[i].appearance.race }}</p>
         <p>{{ values.results[i].appearance.height[1] }}</p>
-
-
-
-        <!--"gender": "Male",
-        "race": "Mutant",
-        "height": [
-          "5'3",
-          "160 cm"
-        ],
-        "weight": [
-          "300 lb",
-          "135 kg"
-        ],
+        <p>{{ values.results[i].appearance.weight[1] }}</p>
+        <!--
         "eye-color": "Blue",
         "hair-color": "Black"-->
       </div>
     </div>
   </div>
-<!--Création de la crta d'identité-->
+<!--Création de la carte d'identité-->
       {% endif %}   
     {% endfor %}
 
