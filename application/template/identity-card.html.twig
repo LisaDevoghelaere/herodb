@@ -1,0 +1,11 @@
+<ul>
+    {% for i in 0..values.results|length %}
+      {% if i < 10 %}
+        <li>{{values.results[i].name}}</li>
+        <li><img src="{{ values.results[i].image.url}}"></li>
+      {% endif %}
+        
+    {% endfor %}
+
+  </ul>
+    
