@@ -2,40 +2,58 @@
 <!-- Boucle qui limite les résultats à 10-->
     {% for i in 0..values.results|length %}
       {% if i < 10 %}
-      <div class="row id-card">
-    <h2 class="col-12">{{values.results[i].name}}</h2>
-  </div>
-  <div class="row">
-    <div class="part-left col-lg-4 col-md-4 col-sm-12 col-12">
-      <div class="div-img-hero col-12">
-        <img src="{{ values.results[i].image.url}}" alt="{{values.results[i].name}} photography" class="img-hero col-12">
-      </div>
-      <div class="alignment">
-        <h3 class="">{{ values.results[i].biography.alignment }}</h3>
-      </div>
+  <div class="id-card">
+    <div class="row">
+      <h2 class="col-12 txt-center">{{values.results[i].name}}</h2>
     </div>
-    <div class="part-right  col-lg-8 col-md-8 col-sm-12 col-12">
-      <div class="powerstats">
-      <h3>Powerstats :</h3>
-      <ul>
-        <li>intelligence : {{ values.results[i].powerstats.intelligence}}</li>
-        <li>strength : {{ values.results[i].powerstats.strength}}</li>
-        <li>speed : {{ values.results[i].powerstats.speed}}</li>
-        <li>durability : {{ values.results[i].powerstats.durability}}</li>
-        <li>power : {{ values.results[i].powerstats.power}}</li>
-        <li>combat : {{ values.results[i].powerstats.combat}}</li>
-      </ul>
-
+    <div class="row">
+      <div class="part-left col-lg-4 col-md-4 col-sm-12 col-12">
+        <div class="div-img-hero col-12">
+          <img src="{{ values.results[i].image.url}}" alt="{{values.results[i].name}} photography" class="img-hero col-12">
+        </div>
+        <div class="alignment">
+          <h3 class="txt-center">{{ values.results[i].biography.alignment }}</h3>
+        </div>
+        <div>
+        <p class="txt-center">Alias : {{ values.results[i].biography.aliases[0]}} • {{ values.results[i].biography.aliases[1]}}</p>
+        <p class="txt-center">ID : {{values.results[i].id}}</p>
       </div>
-      <div class="hero-id-appearance"> 
-        <p>alias : {{ values.results[i].biography.aliases[0]}} • {{ values.results[i].biography.aliases[1]}}</p>
-        <p>{{ values.results[i].appearance.gender }}</p>
-        <p>{{ values.results[i].appearance.race }}</p>
-        <p>{{ values.results[i].appearance.height[1] }}</p>
-        <p>{{ values.results[i].appearance.weight[1] }}</p>
-        <!--
-        "eye-color": "Blue",
-        "hair-color": "Black"-->
+      </div>
+      <div class="part-right  col-lg-8 col-md-8 col-sm-12 col-12">
+        <div class="powerstats">
+        <h3>Powerstats :</h3>
+        <ul>
+          <li>intelligence : {{ values.results[i].powerstats.intelligence}}</li>
+          <li>strength : {{ values.results[i].powerstats.strength}}</li>
+          <li>speed : {{ values.results[i].powerstats.speed}}</li>
+          <li>durability : {{ values.results[i].powerstats.durability}}</li>
+          <li>power : {{ values.results[i].powerstats.power}}</li>
+          <li>combat : {{ values.results[i].powerstats.combat}}</li>
+        </ul>
+        <div>
+          <div class="card">
+            <!-- Custom information -->
+            <div class="about">
+              <h3 class="txt-black">Powerstats</h3>
+              <p class="lead">Radar chart, shadows, custom hover</p>
+              <!-- Tooltip placeholder -->
+              <div id="tooltip" class="tooltip-placeholder"></div>
+              </div>
+              <!-- Canvas for Chart.js -->
+              <canvas id="graphic" width="300" height="200"></canvas>
+            </div> 
+          </div>
+        </div>
+        <div class="hero-id-appearance"> 
+          <h3>Appearance :</h3>
+          <p>gender : {{ values.results[i].appearance.gender }}</p>
+          <p>race : {{ values.results[i].appearance.race }}</p>
+          <p>height : {{ values.results[i].appearance.height[1] }}</p>
+          <p>weight : {{ values.results[i].appearance.weight[1] }}</p>
+          <p>eye-color : {{ values.results[i].appearance['eye-color'] }}</p>
+          <p>hair-color : {{ values.results[i].appearance['hair-color'] }}</p>
+
+        </div>
       </div>
     </div>
   </div>

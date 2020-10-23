@@ -23,7 +23,7 @@ class Batman
         $twig = new Twig('identity-card.html.twig');
         
          echo $twig->render(array(
-                'values'=>$parsed_json 
+                'values'=>$parsed_json
                 )
         );
     }
