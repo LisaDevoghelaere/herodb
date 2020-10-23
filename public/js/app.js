@@ -3,7 +3,6 @@
 const heroInput = document.getElementById('heroinput');
 
 
-
 function getBatman(search){
 //console.log('je suis ton père');
 //dans cette variable on cible la div dans laquelle on va venir charger les cartes
@@ -26,5 +25,39 @@ heroInput.addEventListener('input', ()=>{
     const search = heroInput.value;
     //on lance la fonction avec la requête ajax pour lancer la recherche sur l'API
     getBatman(search);
+
+    // -----------------Graphique des stats------------------
+let ctx = document.getElementById('graphic').getContext('2d');
+let myRadarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        // "colones":
+        labels: ['Intelligence', 'Strenght', 'Speed', 'Durability', 'Power', 'Combat'],
+        // "lignes":
+        datasets: [{
+            label: 'Stat Area',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [88, 100, 88, 95, 100, 75]
+        }]
+    },
+    options: {
+        legend:{
+            display: false,
+        },
+        gridLines: {
+            display: false
+        },
+        scale: {
+            ticks: {
+                suggestedMin: 50,
+                suggestedMax: 100
+            }
+        }
+    }
+});
+console.log('coucou');
+
 });
 // window.onload = getBatman;
+
